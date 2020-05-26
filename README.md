@@ -69,4 +69,4 @@ DemoGame.
 
 </div>
 
-![](![]https://github.com/spyroy/sw_systems2_hw4/blob/master/class%20diagram%20uml.png[]!)
+## class diagram: https://github.com/spyroy/sw_systems2_hw4/blob/master/class%20diagram%20uml.png
