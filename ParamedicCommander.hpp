@@ -1,10 +1,12 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "Soldier.hpp"
+#include "Paramedic.hpp"
 
 using namespace std;
 
-class ParamedicCommander : public Soldier{
+class ParamedicCommander : public Paramedic{
 	
 	public:
         ParamedicCommander(int player){
@@ -13,5 +15,6 @@ class ParamedicCommander : public Soldier{
             Soldier::HP = 100;
             Soldier::DP = 0;
         }
-        virtual void Take_Hit(){}
+        
+        virtual void abillity(){}
 };

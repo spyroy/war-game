@@ -10,15 +10,18 @@ class Soldier{
 	    int HP;
 	    int DP;
 	    int Player;
+		pair<int,int> Location;
 	
 	public:
         Soldier(){
             this->Player = 1;
         }
+
 	    Soldier(int player){
             this->Player = player;
         }
-	    virtual void action(){}
+
+	    virtual void abillity(){}
 
 	    Soldier* Take_Hit(int damage){
 		    this->HP -= damage;
@@ -31,6 +34,10 @@ class Soldier{
 		    }   
 		    return this;
 	    }
+		/*Getters*/
 	    int getPlayer(){return Player;}
 	    int getHP(){return HP;}
+		int getDP(){return DP;}
+		int getMaximum_Health(){return Maximum_Health;}
+		pair<int,int> getLocation(){return Location;}
 };

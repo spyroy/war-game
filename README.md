@@ -68,5 +68,3 @@ DemoGame.
 * ההשראה למטלה היא ממטלה של גיל לוי בקורס "תיכנות מתקדם" שנת ה'תשע"ז.
 
 </div>
-
-## class diagram: https://github.com/spyroy/sw_systems2_hw4/blob/master/class%20diagram%20uml.png

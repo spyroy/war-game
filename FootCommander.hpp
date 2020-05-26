@@ -1,10 +1,11 @@
+#pragma once
 #include <iostream>
 #include <string>
 #include "Soldier.hpp"
 
 using namespace std;
 
-class FootCommander : public Soldier{
+class FootCommander : public FootSoldier{
 	
 	public:
         FootCommander(int player){
@@ -13,5 +14,6 @@ class FootCommander : public Soldier{
             Soldier::HP = 150;
             Soldier::DP = 20;
         }
-        virtual void Take_Hit(){}
+        
+        virtual void abillity(){}
 };
