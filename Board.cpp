@@ -5,6 +5,7 @@
 Soldier*& WarGame::Board:: operator[](std::pair<int,int> location){
     // if(board.at(location.first).at(location.second) != nullptr)
     //     throw runtime_error ("spot is occupied by another soldier");
+    //board[location.first][location.second]->getLocation() = location;
 	return board.at(location.first).at(location.second);
 }
 Soldier* WarGame::Board:: operator[](std::pair<int,int> location) const{
@@ -44,12 +45,31 @@ void WarGame::Board:: move(uint player_number, std::pair<int,int> source, MoveDI
         throw runtime_error ("no such spot in the board");
 	if((*this)[dest]!=nullptr)
         throw runtime_error ("spot is occupied by another soldier");
+    cout << "player " << player_number << " moved from (" << source.first << ", " << source.second << ") " << "to (" << dest.first << " , " << dest.second << ")"<< endl;
     board[dest.first][dest.second] = board[source.first][source.second];
-    board[source.first][source.second] = nullptr;    
+    board[source.first][source.second] = nullptr; 
+    board[dest.first][dest.second]->getLocation() =dest;
+    board[dest.first][dest.second]->abillity();
+
+    // for(int i =0;i<board.size();i++){
+	// 	for(int j=0;j<board.at(0).size();j++){
+    //         if(board[i][j]->getPlayer() == 1){
+    //             cout << "1  ";
+    //         }
+    //         if(board[i][j]->getPlayer() == 1){
+    //             cout << "2  ";
+    //         }
+    //         else
+    //             cout << "0  ";
+    //         if(j == board.size()){
+    //             cout << endl;
+    //         } 
+    //     }
+    // }
 }
 bool WarGame::Board:: has_soldiers(uint player_number) const{
 	for(int i =0;i<board.size();i++){
-		for(int j=0;j<board.at(0).size();j++){
+		for(int j=0;j<board[0].size();j++){
 			if(board[i][j]!=nullptr && board[i][j]->getPlayer()==player_number)
                 return true;
 			}

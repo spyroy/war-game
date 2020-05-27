@@ -8,6 +8,7 @@
  * @since  2020-05
  */
 
+#pragma once
 #include <string>
 #include <vector>
 #include <stdexcept>
@@ -22,6 +23,8 @@ class Board {
   public:
     enum MoveDIR { Up, Down, Right, Left };
     
+    Board() : board(5, std::vector<Soldier*>(5, nullptr)) {}
+
     Board(uint numRows, uint numCols) : 
       board(numRows, std::vector<Soldier*>(numCols, nullptr)) {}
 

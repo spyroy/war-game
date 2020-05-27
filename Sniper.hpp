@@ -13,6 +13,7 @@ class Sniper : public Soldier{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 10;
+            Soldier::instance = "Sniper";
         }
 
         Sniper(int player){
@@ -20,6 +21,7 @@ class Sniper : public Soldier{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 50;
+            Soldier::instance = "Sniper";
         }
         
         virtual void abillity(){}

@@ -14,6 +14,7 @@ class SniperCommander : public Sniper{
             Soldier::Maximum_Health = 120;
             Soldier::HP = 120;
             Soldier::DP = 100;
+            Soldier::instance = "SniperCommander";
         }
         
         virtual void abillity(){}

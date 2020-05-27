@@ -13,6 +13,7 @@ class FootSoldier : public Soldier{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 10;
+            Soldier::instance = "FootSoldier";
         }
         
         FootSoldier(int player){
@@ -20,6 +21,9 @@ class FootSoldier : public Soldier{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 10;
+            Soldier::instance = "FootSoldier";
         }
-        virtual void abillity(){}
+        virtual void abillity(){
+            
+        }
 };

@@ -13,6 +13,7 @@ class Paramedic : public Soldier{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 10;
+            Soldier::instance = "Paramedic";
         }
 
         Paramedic(int player){
@@ -20,6 +21,7 @@ class Paramedic : public Soldier{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 0;
+            Soldier::instance = "Paramedic";
         }
         
         virtual void abillity(){}

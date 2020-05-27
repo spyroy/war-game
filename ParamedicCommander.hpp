@@ -14,6 +14,7 @@ class ParamedicCommander : public Paramedic{
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
             Soldier::DP = 0;
+            Soldier::instance = "ParamedicCommander";
         }
         
         virtual void abillity(){}

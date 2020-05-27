@@ -11,6 +11,7 @@ class Soldier{
 	    int DP;
 	    int Player;
 		pair<int,int> Location;
+		string instance;
 	
 	public:
         Soldier(){
@@ -39,5 +40,6 @@ class Soldier{
 	    int getHP(){return HP;}
 		int getDP(){return DP;}
 		int getMaximum_Health(){return Maximum_Health;}
+		string getInstance(){return instance;}
 		pair<int,int> getLocation(){return Location;}
 };
