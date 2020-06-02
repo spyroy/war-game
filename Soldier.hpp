@@ -30,7 +30,6 @@ class Soldier{
 		    this->HP -= damage;
 		    if(HP <= 0){
                 b[dest.first][dest.second] =  nullptr;
-				//return nullptr;
             }
 		    if(HP > Maximum_Health){
 			    HP = Maximum_Health;

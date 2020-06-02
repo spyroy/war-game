@@ -3,34 +3,9 @@
 
 
 Soldier*& WarGame::Board:: operator[](std::pair<int,int> location){
-    // if(board.at(location.first).at(location.second) != nullptr)
-    //     throw runtime_error ("spot is occupied by another soldier");
-    //board[location.first][location.second]->getLocation() = location;
-
-    /*works but long output */
-    for(int i = board.size()-1;i>=0;i--){
-	 	for(int j=0;j<board.at(0).size();j++){
-             pair<int,int> p = {i,j};
-             if(board[i][j] != nullptr && board[i][j]->getPlayer() == 1){
-                 cout << "1  ";
-             }
-             else if(board[i][j] != nullptr && board[i][j]->getPlayer() == 2){
-                 cout << "2  ";
-             }
-             else
-                 cout << "0  ";
-             if(j == board.at(0).size()-1){
-                 cout << endl;
-             } 
-         }
-    }
-    cout << "board" << endl;
 	return board.at(location.first).at(location.second);
 }
 Soldier* WarGame::Board:: operator[](std::pair<int,int> location) const{
-    // if(board.at(location.first).at(location.second) != nullptr)
-    //     throw runtime_error ("spot is occupied by another soldier");
-    
 	return board.at(location.first).at(location.second);
 }
 void WarGame::Board:: move(uint player_number, std::pair<int,int> source, MoveDIR direction){
@@ -64,18 +39,28 @@ void WarGame::Board:: move(uint player_number, std::pair<int,int> source, MoveDI
         throw runtime_error ("no such spot in the board");
 	if((*this)[dest]!=nullptr)
         throw runtime_error ("spot is occupied by another soldier");
-    cout << "player " << player_number << " moved from (" << source.first << ", " << source.second << ") " << "to (" << dest.first << " , " << dest.second << ")"<< endl;
+    cout << "player " << player_number << " moved from (" << source.first << ", " << source.second << ") " << "to (" << dest.first << " , " << dest.second << ")"<<endl<< endl;
     board[dest.first][dest.second] = board[source.first][source.second];
     board[source.first][source.second] = nullptr; 
     board[dest.first][dest.second]->setLocation(dest);
-    // Board b ;
-    // for(int i = board.size()-1;i>=0;i--){
-	//   	for(int j=0;j<board.at(0).size();j++){
-    //           pair<int,int> p = {i,j};
-    //           b[p] = board[i-board.size()-1][j];
-    //     }
-    // }
     board[dest.first][dest.second]->abillity(board,dest,player_number);
+    for(int i = board.size()-1;i>=0;i--){
+	 	for(int j=0;j<board.at(0).size();j++){
+             pair<int,int> p = {i,j};
+             if(board[i][j] != nullptr && board[i][j]->getPlayer() == 1){
+                 cout << "1  ";
+             }
+             else if(board[i][j] != nullptr && board[i][j]->getPlayer() == 2){
+                 cout << "2  ";
+             }
+             else
+                 cout << "0  ";
+             if(j == board.at(0).size()-1){
+                 cout << endl;
+             } 
+         }
+    }
+    cout << endl;
 
 }
 bool WarGame::Board:: has_soldiers(uint player_number) const{
