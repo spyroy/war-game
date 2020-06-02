@@ -24,5 +24,5 @@ class Sniper : public Soldier{
             Soldier::instance = "Sniper";
         }
         
-        virtual void abillity(){}
+        virtual void abillity(vector<vector<Soldier *>> &b, std::pair<int,int> dest,int player);
 };

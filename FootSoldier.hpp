@@ -2,6 +2,7 @@
 #include <iostream>
 #include <string>
 #include "Soldier.hpp"
+#include "Board.hpp"
 
 using namespace std;
 
@@ -23,7 +24,5 @@ class FootSoldier : public Soldier{
             Soldier::DP = 10;
             Soldier::instance = "FootSoldier";
         }
-        virtual void abillity(){
-            
-        }
+        void abillity(vector<vector<Soldier *>> &b, std::pair<int,int> dest,int player);
 };

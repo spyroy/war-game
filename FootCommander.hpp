@@ -16,5 +16,5 @@ class FootCommander : public FootSoldier{
             Soldier::instance = "FootCommander";
         }
         
-        virtual void abillity(){}
+       void abillity(vector<vector<Soldier *>> &b, std::pair<int,int> dest,int player);
 };

@@ -17,5 +17,5 @@ class ParamedicCommander : public Paramedic{
             Soldier::instance = "ParamedicCommander";
         }
         
-        virtual void abillity(){}
+        virtual void abillity(vector<vector<Soldier *>> &b, std::pair<int,int> dest,int player);
 };
