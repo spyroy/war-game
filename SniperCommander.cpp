@@ -17,11 +17,12 @@ void SniperCommander::abillity(vector<vector<Soldier *>> &b, std::pair<int,int> 
                 if(b[i][j]->getHP() > max){
                     max = b[i][j]->getHP();
                     s = b[i][j];
+                    location = {i,j};
                 }
             }
         }
     }
-    if(max != -1 )
+    if(max != -1 && s != nullptr)
         s->Take_Hit(b[dest.first][dest.second]->getDP(),b,location);
 
     for(int i =0;i<b.size();i++){

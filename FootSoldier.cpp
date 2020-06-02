@@ -24,5 +24,5 @@ void FootSoldier::abillity(vector<vector<Soldier *>> &b, std::pair<int,int> dest
         }
     }
     if(max != INT64_MAX && s != nullptr)
-        s->Take_Hit(b[location.first][location.second]->getDP(),b,location);
+        s->Take_Hit(b[dest.first][dest.second]->getDP(),b,location);
 }

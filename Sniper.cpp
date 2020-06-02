@@ -16,6 +16,7 @@ void Sniper::abillity(vector<vector<Soldier *>> &b, std::pair<int,int> dest,int 
                 if(b[i][j]->getHP() > max){
                     max = b[i][j]->getHP();
                     s = b[i][j];
+                    location = {i,j};
                 }
             }
         }

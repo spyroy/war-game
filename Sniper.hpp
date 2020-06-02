@@ -12,7 +12,7 @@ class Sniper : public Soldier{
             Soldier::Player = 1;
             Soldier::Maximum_Health = 100;
             Soldier::HP = 100;
-            Soldier::DP = 10;
+            Soldier::DP = 50;
             Soldier::instance = "Sniper";
         }
 

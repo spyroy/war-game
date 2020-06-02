@@ -31,8 +31,8 @@ class Soldier{
 		    if(HP <= 0){
                 b[dest.first][dest.second] =  nullptr;
             }
-		    if(HP > Maximum_Health){
-			    HP = Maximum_Health;
+		    if(this->HP > this->Maximum_Health){
+			    this->HP = this->Maximum_Health;
 		    }   
 		    return this;
 	    }

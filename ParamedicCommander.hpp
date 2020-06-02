@@ -11,8 +11,8 @@ class ParamedicCommander : public Paramedic{
 	public:
         ParamedicCommander(int player){
             Soldier::Player = player;
-            Soldier::Maximum_Health = 100;
-            Soldier::HP = 100;
+            Soldier::Maximum_Health = 200;
+            Soldier::HP = 200;
             Soldier::DP = 0;
             Soldier::instance = "ParamedicCommander";
         }
